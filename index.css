@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./img/home.png');
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  margin-right: 10rem;
+}
+
+.navigation {
+  font-family: 'Bungee', cursive;
+}
+
+.navigation ul {
+  list-style: none;
+  margin-left: 3rem;
+  display: flex;
+}
+
+.navigation li {
+  display: flex;
+  margin-left: 7rem;
+}
+
+a {
+  color: #fdfdfd;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+a:hover {
+  color: #ebc9a3;
+}
+
+/* text with neon efect */
+.text {
+  font-family: 'Bungee', cursive;
+  margin-right: 2rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0 20px;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 0 30px #ff005b;
+  z-index: 10;
+  letter-spacing: 5px;
+}
+
+.text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(50px);
+}
+
+.text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  z-index: -2;
+  color: #ff005b;
+  opacity: 0.5;
+  filter: blur(40px);
+}
+
+@media (max-width: 800px) {
+  body {
+    background-image: radial-gradient(
+      circle farthest-corner at 50.4% 50.5%,
+      rgba(251, 32, 86, 1) 0%,
+      rgba(135, 2, 35, 1) 90%
+    );
+  }
+  .text {
+    top: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff005b;
+    z-index: 10;
+  }
+
+  .text::after {
+    filter: blur(30px);
+  }
+
+  .text::before {
+    opacity: 0.3;
+    filter: blur(30px);
+  }
+}

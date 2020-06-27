@@ -6,30 +6,53 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./img/home.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./img/bottle.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 nav {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   align-content: center;
-  margin-right: 10rem;
+  height: 6rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .navigation {
   font-family: 'Bungee', cursive;
 }
 
+.logo {
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+.image_logo {
+  margin-top: 1rem;
+  width: 80px;
+}
+
+img {
+  width: 80px;
+}
+
+.title {
+  color: #ebc9a3;
+  font-size: 3.5rem;
+  margin-left: 2rem;
+  margin-right: 40rem;
+}
+
 .navigation ul {
   list-style: none;
-  margin-left: 3rem;
   display: flex;
 }
 
 .navigation li {
-  display: flex;
-  margin-left: 7rem;
+  margin-left: 10rem;
 }
 
 a {
@@ -40,6 +63,13 @@ a {
 
 a:hover {
   color: #ebc9a3;
+}
+
+.middle {
+  text-align: center;
+  color: #222;
+  font-size: 8rem;
+  font-family: 'Bungee', cursive;
 }
 
 /* text with neon efect */
@@ -86,19 +116,44 @@ a:hover {
 }
 
 @media (max-width: 800px) {
-  body {
-    background-image: radial-gradient(
-      circle farthest-corner at 50.4% 50.5%,
-      rgba(251, 32, 86, 1) 0%,
-      rgba(135, 2, 35, 1) 90%
-    );
+  nav {
+    display: flex;
+    height: 3rem;
   }
+
+  img {
+    width: 30px;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .image_logo {
+    width: 30px;
+  }
+
+  .navigation li {
+    margin-left: 1rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .middle {
+    margin-top: 40%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
   .text {
+    width: 500px;
     top: 50%;
-    font-size: 1.5rem;
-    color: #fff;
-    text-shadow: 0 0 10px #ff005b;
-    z-index: 10;
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .text::after {

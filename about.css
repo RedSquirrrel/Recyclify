@@ -85,10 +85,16 @@ a:hover {
   padding: 2rem;
 }
 
+.description-title {
+  color: #ebc9a3;
+  font-family: 'Bungee', cursive;
+}
+
 .text {
   color: #333;
   font-family: 'Bungee', cursive;
 }
+
 .p {
   font-size: 1.2rem;
 }
